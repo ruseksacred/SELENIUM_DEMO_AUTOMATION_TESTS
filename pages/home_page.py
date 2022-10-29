@@ -3,11 +3,11 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-
 
 class HomePage:
-    driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
+    def __init__(self, driver):
+        self.driver = driver
 
     cart_tab_xpath = "//li[@id='menu-item-20']//a"
 
