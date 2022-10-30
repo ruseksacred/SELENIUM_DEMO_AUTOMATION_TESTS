@@ -11,10 +11,14 @@ class HomePage:
 
     cart_tab_xpath = "//li[@id='menu-item-20']//a"
     shop_tab_xpath = "//li[@id='menu-item-21']//a"
+    my_account_tab_xpath = "//li[@id='menu-item-22']//a"
 
     def click_cart_tab(self):
         self.driver.find_element(By.XPATH, HomePage.cart_tab_xpath).click()
 
     def click_shop_tab(self):
         self.driver.find_element(By.XPATH, HomePage.shop_tab_xpath).click()
+
+    def click_my_account_tab(self):
+        self.driver.find_element(By.XPATH, HomePage.my_account_tab_xpath).click()
 
