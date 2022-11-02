@@ -33,6 +33,15 @@ class TestHomePage:
         home_page.click_shop_button()
         assert shop_page.check_if_shop_page_title_is_displayed()
 
+    def test_click_title_home_page_return_to_home_page(self):
+        home_page = HomePage(self.driver)
+        shop_page = ShopPage(self.driver)
+        home_page.click_shop_button()
+        shop_page.click_main_page_title()
+        assert self.driver.current_url == "http://seleniumdemo.com/"
+
+
+
 
 
 
